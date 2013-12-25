@@ -36,6 +36,14 @@ func (s Stack) Popf() (Stack, interface{}, error) {
 	return s[:s.Len()-1], s[s.Len()-1], nil
 }
 
+func (s Stack) Top() (interface{}, error) {
+	if s.IsEmpty() {
+		return nil, errors.New("Empty Stack!")
+	}
+
+	return s[s.Len()-1], nil
+}
+
 func (s Stack) Len() int {
 	return len(s)
 }

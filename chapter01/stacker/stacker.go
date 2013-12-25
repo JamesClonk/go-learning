@@ -1,8 +1,8 @@
 package main
 
 import (
-	"chapter01/stacker/stack"
 	"fmt"
+	"github.com/jamesclonk/go-learning/chapter01/stacker/stack"
 )
 
 func main() {
