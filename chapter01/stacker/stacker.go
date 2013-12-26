@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jamesclonk/go-learning/chapter01/stacker/stack"
+	"github.com/JamesClonk/go-learning/chapter01/stacker/stack"
 )
 
 func main() {
