@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>{{.Title}}</title>
+	<style>.error { color:#FF0000; }</style>
+</head>
+
+<body>
+	<h3>Statistics</h3>
+	<p>Computes basic statistics for a given list of numbers</p>
+
+	<form action="/" method="POST">
+		<label for="numbers">Numbers (separated by comma or space):</label><br/>
+		<input type="text" name="numbers" size="30"/><br/>
+		<input type="submit" value="Calculate Statistics"/>
+	</form>
+
+	<p class="error">{{.Message}}</p>
+	<hr/>
+	<table border="1">
+		<tr><th colspan="2">Results</th></tr>
+		<tr><td>Numbers</td><td>{{.Stats.NumberListing}}</td></tr>
+		<tr><td>Count</td><td>{{.Stats.LenOfNumbers}}</td></tr>
+		<tr><td>Mean</td><td>{{.Stats.Mean}}</td></tr>
+		<tr><td>Median</td><td>{{.Stats.Median}}</td></tr>
+		<tr><td>Mode</td><td>{{.Stats.Mode}}</td></tr>
+		<tr><td>Std. Dev.</td><td>{{.Stats.StdDev}}</td></tr>
+	</table>
+</body>
+</html>
