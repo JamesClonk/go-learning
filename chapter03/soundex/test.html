@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Chapter 3.8 - Soundex</title>
+	<style>.error { color:#FF0000; }</style>
+</head>
+
+<body>
+	<h3>Soundex - Test</h3>
+
+	<hr/>
+	<table border="1">
+		<tr><th>Name</th><th>Soundex</th><th>Expected</th><th>Test</th></tr>
+
+		{{range .}}
+            <tr><td>{{.Name}}</td><td>{{.Soundex}}</td><td>{{.Expected}}</td><td>{{.Test}}</td></tr>
+        {{end}}
+	</table>
+</body>
+</html>

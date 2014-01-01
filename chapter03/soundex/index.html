@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Chapter 3.8 - Soundex</title>
+	<style>.error { color:#FF0000; }</style>
+</head>
+
+<body>
+	<h3>Soundex</h3>
+	<p>Computes soundex codes for list of names.</p>
+
+	<form action="/" method="POST">
+		<label for="numbers">Names (separated by comma or space):</label><br/>
+		<input type="text" name="names" size="50"/><br/>
+		<input type="submit" value="Compute"/>
+	</form>
+
+	<hr/>
+	<table border="1">
+		<tr><th>Name</th><th>Soundex</th></tr>
+
+		{{range .}}
+            <tr><td>{{.Name}}</td><td>{{.Soundex}}</td></tr>
+        {{end}}
+	</table>
+</body>
+</html>
