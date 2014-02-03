@@ -13,7 +13,7 @@ type Job struct {
 }
 
 func jobSample() {
-	joblist := []Job{{1}, {2}, {3}, {4}, {5}}
+	joblist := []Job{{1}, {2}, {3}, {4}, {5}, {6}}
 
 	jobs := make(chan Job)
 	done := make(chan bool, len(joblist))
