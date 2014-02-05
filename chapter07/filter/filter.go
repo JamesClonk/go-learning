@@ -50,10 +50,15 @@ func source(files []string) <-chan string {
 }
 
 func filterSuffixes(suffixes []string, in <-chan string) <-chan string {
-	out := make(chan string, 100)
+	out := make(chan string, cap(in))
 
 	go func() {
 		for item := range in {
+			if len(suffixes) == 0 {
+				out <- item
+				continue
+			}
+
 			for _, suffix := range suffixes {
 				if strings.HasSuffix(item, suffix) {
 					out <- item
@@ -67,10 +72,15 @@ func filterSuffixes(suffixes []string, in <-chan string) <-chan string {
 }
 
 func filterSize(min int64, max int64, in <-chan string) <-chan string {
-	out := make(chan string, 100)
+	out := make(chan string, cap(in))
 
 	go func() {
 		for item := range in {
+			if min == -1 && max == -1 {
+				out <- item
+				continue
+			}
+
 			file, err := os.Open(item)
 			if err != nil {
 				log.Printf("Could not open file [%s]: %v\n", item, err)
@@ -81,6 +91,7 @@ func filterSize(min int64, max int64, in <-chan string) <-chan string {
 				log.Println(err)
 				continue
 			}
+
 			if info.Size() >= min && info.Size() <= max {
 				out <- item
 			}
