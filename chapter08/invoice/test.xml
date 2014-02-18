@@ -1,0 +1,20 @@
+<INVOICES version="100">
+	<INVOICE Id="2640" CustomerId="968" Raised="2012-08-27" Due="2012-09-26" Paid="false">
+		<NOTE>See special Terms &amp; Conditions</NOTE>
+		<ITEM Id="MI2419" Price="342.80" Quantity="1">
+			<NOTE></NOTE>
+		</ITEM>
+		<ITEM Id="OU5941" Price="448.99" Quantity="3">
+			<NOTE>&quot;Blue&quot; ordered but will accept &quot;Navy&quot;</NOTE>
+		</ITEM>
+		<ITEM Id="IF9284" Price="475.01" Quantity="1">
+			<NOTE></NOTE>
+		</ITEM>
+		<ITEM Id="TI4394" Price="417.79" Quantity="2">
+			<NOTE></NOTE>
+		</ITEM>
+		<ITEM Id="VG4325" Price="80.67" Quantity="5">
+			<NOTE></NOTE>
+		</ITEM>
+	</INVOICE>
+</INVOICES>
